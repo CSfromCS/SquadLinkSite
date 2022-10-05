@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>SquadLink | {% block title %} {% endblock %}</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div id="headertitle">SquadLink</div>
+        <div id="rightheader">
+            <div onclick="location.href='/'">Home</div>
+            <div>About</div>
+            <div>Account</div>
+        </div>
+    </header>
+
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <div id="stickybottom"></div>
+</body>
+
+</html>
